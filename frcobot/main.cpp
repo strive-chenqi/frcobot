@@ -1,4 +1,5 @@
 ﻿#include "network_interface.h"
+#include "frcobot.h"
 #include <stdio.h>
 #include <exception>
 #include <iostream>
@@ -8,13 +9,12 @@ using namespace std;
 int main(void)
 {
 	
-    NetworkInterface test;
+    // 获取机器人实例
+    IFrcoBot& robot = IFrcoBot::GetInstance(new ManualMode);
+    
 
-	//test.init();
 
-	test.eventListen();
-
-	test.eventLoop();
 	
+    return 0;
 	
 }
